@@ -1,0 +1,186 @@
+@import '../variables.scss';
+
+// Div From 🌎 
+.from{
+    background-color: $color-negro-aim;
+    p{
+        padding: 8px;
+        color: $color-blanco;
+        text-align: center;
+        font-weight: 300;
+    }
+   .line{
+       background-color: $color-gris-claro;
+       width: 100%;
+       height: 1px;
+   }
+}
+
+
+header {
+    background-color: $color-negro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6rem;
+
+    img {
+        width: 9rem;
+        position: absolute;
+        left: 5px;
+        top: 25px;
+    }
+    .header__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        ul {
+            list-style: none;
+            display: flex;
+            transition: all .35s;
+            li {
+                margin: 2rem;
+                a {
+                    color: $color-gris;
+                    font-size: 13px;
+                    font-weight: 500;
+                    text-decoration: none;
+                    transition: 0.6s all ease;
+                    &:hover{
+                        color: $color-blanco;
+                    }
+                }
+                .download{
+        color: $color-negro;
+        background-color: $color-blanco;
+        padding:  6px;
+        text-decoration: none;
+        border-radius: 5px;
+        
+    }
+            }
+
+        }
+
+        .checkbtn {
+            .menu-icon {
+
+                img {
+                    width: 3rem;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .menu-icon,
+        #check {
+            display: none;
+        }
+    }
+
+    .header__divs {
+        align-items: center;
+        display: flex;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem;
+
+            img {
+                width: 1.3rem;
+                margin-bottom: 4px;
+            }
+
+            p {
+                color: $color-blanco;
+                font-size: 11px;
+                font-weight: 200;
+            }
+        }
+    }
+    
+}
+
+// Medias Query
+
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        .header__divs {
+            display: none;
+        }
+
+        .header__nav {
+            img {
+                width: 9rem;
+            }
+
+            .checkbtn {
+                display: block;
+                
+                .menu-icon {
+                    cursor: pointer;
+                    display: block;
+                    position: fixed;
+                    top: 35px;
+                    border-radius: 10px;
+                    right: 70px;
+                    img {
+                        width: 3rem;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .header__nav ul {
+        display: block;
+        position: fixed;
+        top: 100px;
+        flex-direction: column;
+        background-color: $color-negro;
+        height: 100vh;
+        right: -20px;
+        left: -100%;
+        width: 100%;
+        li{
+            a{
+                &:hover{
+                    color: $color-blanco;
+                }
+            }
+            .download {
+                background-color: $color-blanco;
+                padding: 10px;
+                border-radius: 5px;
+                color: $color-negro;
+                &:hover{
+                    color: $color-gris;
+                }
+            }
+        }
+    }
+    nav ul li {
+        padding: 2rem;
+        justify-content: center;
+        margin: 0;
+        display: flex;
+    }
+    
+    
+    #check:checked~ul {
+        left: 0;
+    }
+    
+   
+}
+

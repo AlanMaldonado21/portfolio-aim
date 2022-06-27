@@ -1,0 +1,14 @@
+$color-negro : #000000;
+$color-blanco : #FFFFFF;
+$color-gris: #8A8A8A;
+$color-gris-claro: #525252;
+$color-negro-aim: #010101;
+$fuente-general : 'Inter', sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fuente-general;
+    font-size: 14px;
+}
